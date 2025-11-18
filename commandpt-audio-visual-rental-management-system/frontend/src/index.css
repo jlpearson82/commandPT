@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+        /* Light Theme - Neutral Black/White with Red Accents */
+        --background: 1.0 0 0;
+        --foreground: 0.15 0 0;
+        --card: 1.0 0 0;
+        --card-foreground: 0.15 0 0;
+        --popover: 1.0 0 0;
+        --popover-foreground: 0.15 0 0;
+        /* Red Primary - CommandPT Brand Color */
+        --primary: 0.55 0.24 25;
+        --primary-foreground: 1.0 0 0;
+        /* Light Gray Secondary */
+        --secondary: 0.95 0 0;
+        --secondary-foreground: 0.15 0 0;
+        /* Muted Light Gray */
+        --muted: 0.96 0 0;
+        --muted-foreground: 0.45 0 0;
+        /* Red Accent */
+        --accent: 0.60 0.26 25;
+        --accent-foreground: 1.0 0 0;
+        /* Destructive Red */
+        --destructive: 0.50 0.22 20;
+        --destructive-foreground: 1.0 0 0;
+        /* Success Green */
+        --success: 0.60 0.18 155;
+        --success-foreground: 1.0 0 0;
+        /* Warning Orange */
+        --warning: 0.68 0.20 45;
+        --warning-foreground: 0.15 0 0;
+        /* Borders and Inputs */
+        --border: 0.90 0 0;
+        --input: 0.90 0 0;
+        --ring: 0.55 0.24 25;
+        /* Chart Colors - Red Theme */
+        --chart-1: 0.60 0.26 25;
+        --chart-2: 0.55 0.24 25;
+        --chart-3: 0.60 0.18 155;
+        --chart-4: 0.68 0.20 45;
+        --chart-5: 0.50 0.20 15;
+        /* Sidebar */
+        --sidebar: 1.0 0 0;
+        --sidebar-foreground: 0.15 0 0;
+        --sidebar-primary: 0.55 0.24 25;
+        --sidebar-primary-foreground: 1.0 0 0;
+        --sidebar-accent: 0.95 0 0;
+        --sidebar-accent-foreground: 0.15 0 0;
+        --sidebar-border: 0.90 0 0;
+        --sidebar-ring: 0.55 0.24 25;
+    }
+
+    .dark {
+        /* Dark Theme - Neutral Black/White with Red Accents */
+        --background: 0.10 0 0;
+        --foreground: 0.98 0 0;
+        --card: 0.15 0 0;
+        --card-foreground: 0.98 0 0;
+        --popover: 0.15 0 0;
+        --popover-foreground: 0.98 0 0;
+        /* Red Primary - CommandPT Brand Color */
+        --primary: 0.58 0.26 25;
+        --primary-foreground: 1.0 0 0;
+        /* Dark Gray Secondary */
+        --secondary: 0.20 0 0;
+        --secondary-foreground: 0.98 0 0;
+        /* Muted Dark Gray */
+        --muted: 0.18 0 0;
+        --muted-foreground: 0.65 0 0;
+        /* Red Accent */
+        --accent: 0.62 0.28 25;
+        --accent-foreground: 1.0 0 0;
+        /* Destructive Red */
+        --destructive: 0.52 0.24 20;
+        --destructive-foreground: 1.0 0 0;
+        /* Success Green */
+        --success: 0.62 0.18 155;
+        --success-foreground: 1.0 0 0;
+        /* Warning Orange */
+        --warning: 0.70 0.20 45;
+        --warning-foreground: 0.10 0 0;
+        /* Borders and Inputs */
+        --border: 0.25 0 0;
+        --input: 0.25 0 0;
+        --ring: 0.58 0.26 25;
+        /* Chart Colors - Bright for Dark Mode */
+        --chart-1: 0.62 0.28 25;
+        --chart-2: 0.58 0.26 25;
+        --chart-3: 0.62 0.18 155;
+        --chart-4: 0.70 0.20 45;
+        --chart-5: 0.52 0.22 15;
+        /* Sidebar */
+        --sidebar: 0.15 0 0;
+        --sidebar-foreground: 0.98 0 0;
+        --sidebar-primary: 0.58 0.26 25;
+        --sidebar-primary-foreground: 1.0 0 0;
+        --sidebar-accent: 0.20 0 0;
+        --sidebar-accent-foreground: 0.98 0 0;
+        --sidebar-border: 0.25 0 0;
+        --sidebar-ring: 0.58 0.26 25;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+}
+
+/* Custom utility classes for the red theme */
+@layer utilities {
+    .text-success {
+        color: oklch(var(--success));
+    }
+    .text-warning {
+        color: oklch(var(--warning));
+    }
+    .bg-success {
+        background-color: oklch(var(--success));
+    }
+    .bg-warning {
+        background-color: oklch(var(--warning));
+    }
+}
